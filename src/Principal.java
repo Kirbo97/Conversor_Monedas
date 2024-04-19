@@ -1,4 +1,6 @@
-
+import java.text.DateFormat;  //importo la libreria que admite los cambios de formato de fecha y hora
+import java.text.SimpleDateFormat; //importo la libreria que permite editar el formato de la fecha y hora
+import java.util.Date; //importo la libreria que captura la fecha y hora local
 import java.io.FileWriter;   //importo la libreria de creacion de archivos
 import java.io.IOException; //libreria para utilisar las funciones del try y catch
 import java.util.Scanner;  //importo los servicios para agregar por teclado datos
@@ -92,7 +94,11 @@ public class Principal {
                     Moneda mon = moneda.ConvertirMoneda(cantidad,codigo);
                     mensaje="El valor de " + cantidad +" "+mon.toString();
                     System.out.println("\n"+mensaje+".");
-                    String men_guar="// "+mensaje+".\n";
+
+                    Date date = new Date();
+                    DateFormat hourdateFormat = new SimpleDateFormat("HH.mm dd-MM-yyyy");
+                    String historial = hourdateFormat.format(date);
+                    String men_guar="// "+mensaje+".  "+historial+"\n";
 
                     escritura.write(men_guar);
                 } catch (NumberFormatException e){

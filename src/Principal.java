@@ -67,7 +67,7 @@ public class Principal {
                 if(opc1==9){ cod1="RUB"; }
                 if(opc1==10){ cod1="SEK"; }
 
-                System.out.print("\nIngrese una cantidad: ");
+                System.out.print("Ingrese una cantidad: ");
                 cantidad= teclado.nextDouble();
 
 
@@ -91,8 +91,8 @@ public class Principal {
                 try{
                     Moneda mon = moneda.ConvertirMoneda(cantidad,codigo);
                     mensaje="El valor de " + cantidad +" "+mon.toString();
-                    System.out.println("\n"+mensaje);
-                    String men_guar="// "+mensaje+"\n";
+                    System.out.println("\n"+mensaje+".");
+                    String men_guar="// "+mensaje+".\n";
 
                     escritura.write(men_guar);
                 } catch (NumberFormatException e){

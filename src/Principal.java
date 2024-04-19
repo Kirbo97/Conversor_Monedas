@@ -9,11 +9,10 @@ public class Principal {
     public static void main(String[] args) throws IOException {
 
         int opcion= 0;
-        int opc1,opc2;
+        int opc1 = 0,opc2 = 0;
         double cantidad;
+        String [] cadenas = { "USD","ARS","BRL","AUD","AWG","BBD","COP","INR","HKD","MXN","LRD","RUB","SEK","BMD","BND"};
         String mensaje;
-        String cod1 ="";
-        String cod2 ="";
         String menu1 = """
                     \n********************************************
 * Sea bienvenido/a al conversor de Monedas *
@@ -25,20 +24,15 @@ public class Principal {
 
 
         String menu2 = """
-                    \n********************************************
-*            Monedas soportadas            *
-********************************************
-*  1) Dólar (USD).                         *
-*  2) Peso argentino (ARS).                *
-*  3) Real Brasileño (BRL).                *
-*  4) Peso colombiano (COP).               *
-*  5) Rupia indonesia (INR).               *
-*  6) Dólar de Hong Kong (HKD).            *
-*  7) Peso mexicano (MXN).                 *
-*  8) Dólar liberiano (LRD).               *
-*  9) Rublo ruso (RUB).                    *
-* 10) Corona sueca (SEK).                  *
-********************************************
+                    \n****************************************************************************************************************************
+*                                                    Monedas soportadas                                                    *
+****************************************************************************************************************************
+*   1) Dólar (USD).                    *   2) Peso argentino (ARS).                *   3) Real Brasileño (BRL).            *
+*   4) Dólar australiano (AUD).        *   5) Florín de Aruba (AWG).               *   6) Dólar de Barbados (BBD).         *
+*   7) Peso colombiano (COP).          *   8) Rupia indonesia (INR).               *   9) Dólar de Hong Kong (HKD).        *
+*  10) Peso mexicano (MXN).            *  11) Dólar liberiano (LRD).               *  12) Rublo ruso (RUB).                *
+*  13) Corona sueca (SEK).             *  14) Dólar de Bermudas (BMD).             *  15) Dólar de Brunéi (BND).           *
+****************************************************************************************************************************
 """;
 
         Scanner teclado = new Scanner(System.in);
@@ -47,56 +41,36 @@ public class Principal {
 
         while(opcion != 2){
             System.out.print(menu1);
-
             System.out.print("Escoja una opcion: ");
             opcion = teclado.nextInt();
-
 
             if(opcion==1){
                 System.out.print(menu2);
 
-                System.out.print("Escoja que valor monetario base: ");
-                opc1 = teclado.nextInt();
-
-                if(opc1==1){ cod1="USD"; }
-                if(opc1==2){ cod1="ARS"; }
-                if(opc1==3){ cod1="BRL"; }
-                if(opc1==4){ cod1="COP"; }
-                if(opc1==5){ cod1="INR"; }
-                if(opc1==6){ cod1="HKD"; }
-                if(opc1==7){ cod1="MXN"; }
-                if(opc1==8){ cod1="LRD"; }
-                if(opc1==9){ cod1="RUB"; }
-                if(opc1==10){ cod1="SEK"; }
+                while(opc1 != 15){
+                    System.out.print("Escoja que valor monetario base: ");
+                    opc1 = teclado.nextInt();
+                    if (opc1 > 15){ System.out.println("\nOpción inválida"); } else { break; }
+                }
 
                 System.out.print("Ingrese una cantidad: ");
                 cantidad= teclado.nextDouble();
 
+                while(opc2 != 15){
+                    System.out.print("Escoja que valor monetario que desea obtener: ");
+                    opc2 = teclado.nextInt();
+                    if (opc2 > 15){ System.out.println("\nOpción inválida"); } else { break; }
+                }
 
-                System.out.print("Escoja que valor monetario que desea obtener: ");
-                opc2 = teclado.nextInt();
-
-                if(opc2==1){ cod2="USD"; }
-                if(opc2==2){ cod2="ARS"; }
-                if(opc2==3){ cod2="BRL"; }
-                if(opc2==4){ cod2="COP"; }
-                if(opc2==5){ cod2="INR"; }
-                if(opc2==6){ cod2="HKD"; }
-                if(opc2==7){ cod2="MXN"; }
-                if(opc2==8){ cod2="LRD"; }
-                if(opc2==9){ cod2="RUB"; }
-                if(opc2==10){ cod2="SEK"; }
-
+                String codigo=cadenas[opc1-1]+"/"+cadenas[opc2-1];
                 Convertir moneda = new Convertir();
-                String codigo=cod1+"/"+cod2;
-
                 try{
                     Moneda mon = moneda.ConvertirMoneda(cantidad,codigo);
                     mensaje="El valor de " + cantidad +" "+mon.toString();
                     System.out.println("\n"+mensaje+".");
 
                     Date date = new Date();
-                    DateFormat hourdateFormat = new SimpleDateFormat("HH.mm dd-MM-yyyy");
+                    DateFormat hourdateFormat = new SimpleDateFormat("HH:mm dd-MM-yyyy");
                     String historial = hourdateFormat.format(date);
                     String men_guar="// "+mensaje+".  "+historial+"\n";
 
@@ -114,8 +88,7 @@ public class Principal {
                 break;
             }
 
-            if(opcion>2){ System.out.println("\nOpción inválida");
-            }
+            if(opcion>2){ System.out.println("\nOpción inválida"); }
 
         }
     }

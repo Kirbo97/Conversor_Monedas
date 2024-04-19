@@ -9,7 +9,6 @@ import java.net.http.HttpResponse;  //importo los servicios para encapsular la i
 public class Convertir {
 
     public Moneda ConvertirMoneda( double cant,String cod){
-
         URI direccion = URI.create("https://v6.exchangerate-api.com/v6/3dab37bc7926d45742ef4238/pair/"+cod+"/"+cant);
         HttpClient client = HttpClient.newHttpClient(); //creo un objeto para que establesca conecion de cliente servidor
         HttpRequest request = HttpRequest.newBuilder().uri(direccion).build(); //creo un objeto de una funcion para que lea los valores HTTP enviados por un cliente y los busque

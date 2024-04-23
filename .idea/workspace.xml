@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b8e174a-19c8-4dc2-b27d-4a01161627ab" name="Changes" comment="" />
+    <list default="true" id="b711afeb-dc22-47ef-933f-9b93d3c5b52b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,11 +17,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Principal.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/convercion.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -37,13 +40,14 @@
     "Application.Desafio.executor": "Run",
     "Application.Lectura.executor": "Run",
     "Application.Main.executor": "Run",
-    "Application.Principal.executor": "Run",
+    "Application.Principal.executor": "Coverage",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ToolWindowRun.ShowToolbar": "false",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/FABIAN DAQUILEMA/Desktop/Cursos_Online/Programacion/Oracle one/Java/Proyecto Challenges/Conversor_Monedas/src/librerias/gson-2.10.1.jar",
+    "last_opened_file_path": "C:/Users/FABIAN DAQUILEMA/Desktop/Cursos_Online/Programacion/Oracle one/Java/Proyecto Challenges/DesafioFinalC4",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -53,7 +57,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4b8e174a-19c8-4dc2-b27d-4a01161627ab" name="Changes" comment="" />
+      <changelist id="b711afeb-dc22-47ef-933f-9b93d3c5b52b" name="Changes" comment="" />
       <created>1712172473441</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -67,7 +71,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$USER_HOME$/AppData/Local/Temp/Rar$DIa8240.47937/Compra.java</url>
           <line>18</line>
-          <properties class="Compra" method="toString">
+          <properties class="Compra">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -75,5 +79,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Conversor_Monedas$Principal.ic" NAME="Principal Coverage Results" MODIFIED="1713895651471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

@@ -1,10 +1,8 @@
 import com.google.gson.Gson;  //importo la libreria de especifica de gson
-
 import java.net.URI;
 import java.net.http.HttpClient;  //importo los servicios para enviar solicitudes HTTP y recibir respuestas HTTP de un recurso identificado por un URI.
 import java.net.http.HttpRequest;  //importo los servicios para que ASP.NET lea los valores HTTP enviados por un cliente durante una solicitud web.
 import java.net.http.HttpResponse;  //importo los servicios para encapsular la información de la respuesta HTTP de una operación ASP.NET
-
 
 public class Convertir {
 
